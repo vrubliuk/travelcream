@@ -1,1 +1,1 @@
-"use strict";var x="x";
+"use strict";$("#header-button-menu").click(function(){var e=document.getElementById("header-links");""===e.className?e.className+=" header-links-responsiv":e.className=""});

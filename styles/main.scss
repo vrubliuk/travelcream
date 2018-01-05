@@ -47,22 +47,132 @@ input[type="date"]::-webkit-inner-spin-button{
     display: none;
 }
 
+.active {
+  color: $pink;
+}
 
 
 
-
-// SECTION MAIN
+// SECTION HEADER
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  
+  z-index: 99;
+  .container {
+    position: relative;
+    border: orange solid 1px;
+  }
+}
+#header-logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 40px;
+  vertical-align: middle;
 }
 
+#header-links {
+  vertical-align: middle;
+  overflow: hidden;
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  transition: 1s ease;
+  // height: 40px;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-left: 30px;
+      line-height: 40px;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
 
+#header-button-menu {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top:0;
+  // bottom:0;
+  left:0;
+  right:0;
+  color: white;
+  background-color: transparent;
+  border: none;
+  // border: 1px solid green;
+  font-size: 28px;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+#header-button-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  
+  &:hover {
+    color: $pink;
+    border-color: $pink;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #header-logo {
+    margin-left: 15px;
+  }
+
+  #header-links {
+    display: none;
+    
+    ul {
+      li {
+        display: block;
+        margin-left: 15px;
+      }
+    }
+  }
+ 
+  #header-button-menu {
+    display: block;
+  }
+  #header-button-login {
+    right: 15px;
+  }
+
+  .header-links-responsive {
+    display: block;
+  }
+
+
+}
+
+// SECTION MAIN
 #main {
-
   min-height: 650px;
   background-color: $darkBlue;
   background-image: url(../images/main-bg.jpg);
@@ -70,7 +180,7 @@ header {
   background-position: center;
  
   // border: 1px solid red;
-
+  // margin-bottom: -27px;
 
 .main-content {
   position: relative;
@@ -122,6 +232,8 @@ header {
   margin-top: -27px;
   font-size: 0;
   text-align: center;
+
+  position: relative;
 }
 
 .input-standart {
