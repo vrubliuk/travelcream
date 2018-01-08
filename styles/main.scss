@@ -37,7 +37,8 @@ a:visited {
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1140px;
+  // padding: 0 15px;
   margin: auto;
   // border: 1px solid grey;
 }
@@ -51,49 +52,35 @@ input[type="date"]::-webkit-inner-spin-button{
   color: $pink;
 }
 
-
-
 // SECTION HEADER
 
 header {
+  padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  
   z-index: 99;
   .container {
     position: relative;
-    border: orange solid 1px;
   }
 }
-#header-logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  display: inline-block;
-  cursor: pointer;
-  line-height: 40px;
-  vertical-align: middle;
-}
-
-#header-links {
-  vertical-align: middle;
+.header-links {
   overflow: hidden;
+  a {
+    float: left;
+  display: block;
   color: white;
+  text-align: left;
+  line-height: 40px;
   font-size: 16px;
-  display: inline-block;
-  transition: 1s ease;
-  // height: 40px;
-  ul {
-    list-style-type: none;
-    li {
-      display: inline-block;
-      margin-left: 30px;
-      line-height: 40px;
-      &:hover {
-        color: $pink;
-      }
+  margin: 0 15px;
+    &:first-child {
+      font-size: 24px;
+    font-weight: bold;
+    }
+    &:hover {
+      color: $pink;
     }
   }
 }
@@ -103,19 +90,16 @@ header {
   position: absolute;
   margin: auto;
   top:0;
-  // bottom:0;
   left:0;
   right:0;
   color: white;
   background-color: transparent;
   border: none;
-  // border: 1px solid green;
   font-size: 28px;
   width: 120px;
   height: 40px;
   line-height: 40px;
   cursor: pointer;
-
   &:hover {
     color: $pink;
   }
@@ -124,8 +108,7 @@ header {
 #header-button-login {
   position: absolute;
   top: 0;
-  right: 0;
-
+  right: 15px;
   color: white;
   font-size: 16px;
   background-color: transparent;
@@ -134,41 +117,46 @@ header {
   width: 120px;
   height: 40px;
   cursor: pointer;
-  
   &:hover {
     color: $pink;
     border-color: $pink;
   }
 }
 
-@media only screen and (max-width: 900px) {
-  #header-logo {
-    margin-left: 15px;
+@media screen and (max-width: 768px) {
+  header {
+    background: rgba(0, 0,0, 0.75);
+    padding-bottom: 0;
   }
-
-  #header-links {
-    display: none;
-    
-    ul {
-      li {
-        display: block;
-        margin-left: 15px;
+  .header-links {
+    a:first-child {
+      margin-bottom: 20px;
+    }
+    a:not(:first-child) {
+      display: none;
+    }
+  }
+  .header-links.responsive {
+    position: relative;
+    a {
+      float: none;
+      display: block;
+      margin: 0;
+      padding: 0 15px;
+    }
+    a:first-child {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    a:not(:first-child) {
+      &:hover {
+        background: rgba(0, 0,0, 0.75);
       }
     }
   }
- 
   #header-button-menu {
     display: block;
-  }
-  #header-button-login {
-    right: 15px;
-  }
-
-  .header-links-responsive {
-    display: block;
-  }
-
-
+  } 
 }
 
 // SECTION MAIN
@@ -189,7 +177,7 @@ header {
   color: white;
   h1 {
     font-size: 72px;
-  
+    // font-size: 5.5vw;
     height: 100px;
     // line-height: 100px;
     text-align: center;
@@ -215,17 +203,10 @@ header {
     // border: 1px solid red;
   }
 
-
-
-
-
+}
 }
 
-}
-
-
-
-
+// SECTION SEARCH
 #search {
   // min-height: 55px;
   // border: #ff4b64 1px solid;
@@ -256,8 +237,6 @@ header {
   }
 }
 
-
-
 .input-button {
  border: none;
  background: $pink;
@@ -267,4 +246,174 @@ header {
  font-size: 16px;
  font-weight: 500;
  cursor: pointer;
+}
+
+
+// GENERAL STYLES FOR SECTIONS
+.section-head {
+   @extend %clearfix;
+   padding: 0 15px;
+  .section-name {
+   
+    float: left;
+    font-size: 30px;
+    color: #484848;
+  }
+  .section-tabs {
+    margin-top: 12px;
+    float: right;
+    list-style-type: none;
+    li {
+      float: left;
+      color: #484848;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+
+      &.tab-active {
+        color: $pink;
+        font-weight: 500;
+      }
+    }
+    
+  }
+
+
+}
+.section-footer {
+  @extend %clearfix;
+  padding: 0 15px;
+  div {
+    float: right;
+    color: #484848;
+    font-size: 16px;
+  }
+}
+
+.button-price {
+  font-size: 16px;
+  color: $pink;
+  background-color: transparent;
+  border: 1px solid $pink;
+  border-radius: 3px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  &:hover {
+    background-color: $pink;
+    color: white;
+    border-color: $pink;
+  }
+
+}
+
+
+
+// SECTION FLIGHTS
+#flights {
+  .section-content{
+
+  }
+}
+
+// SECTION HOTELS
+#hotels {
+  
+  .section-content {
+    font-size: 0;
+    text-align: center;
+  }
+  .tile {
+    border: 1px solid #e6e6e6;
+    display: inline-block;
+    margin: 15px;
+    text-align: left;
+    img {
+      margin: -1px -1px 0 -1px;
+
+    }
+    .tile-text-container {
+      font-size: 16px;
+      padding: 20px 15px;
+      h4 {
+    
+        font-weight: bolder;
+        color: #484848;
+        
+      }
+      & > div {
+        margin: 20px 0;
+        @extend %clearfix;
+        color: #9a9a9a;
+        .tile-distance {
+          float: left;
+        }
+        .tile-wifi {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+// SECTION ATTRACTIONS
+
+// SECTION TRIPS
+#trips {
+  .section-content {
+    padding: 0 15px;
+  }
+  .tile {
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    min-height: 233px;
+    margin-bottom: 30px;
+    img {
+      float: left;
+      margin: -1px 30px -1px -1px;
+    }
+    .tile-text-container {
+      padding: 30px;
+      h4 {
+        font-weight: bolder;
+        color: #484848;
+        margin-bottom: 30px;
+      }
+      p {
+        color: #484848;
+      }
+    }
+  }
+}
+//SECTION FOOTER
+#footer {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    .footer-column {
+      // border: 1px solid orange;
+      color: #484848;
+      font-size: 16px;
+      h3 {
+        font-size: 30px;
+        margin: 0 0 15px 0;
+      }
+      a {
+        display: block;
+        margin: 0 0 15px 0;
+
+        &.email-link {
+          color: $pink;
+        }
+      }
+      p {
+        margin: 0 0 15px 0;
+      }
+    }
+  }
 }

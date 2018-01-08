@@ -1,1 +1,1 @@
-"use strict";$("#header-button-menu").click(function(){var e=document.getElementById("header-links");""===e.className?e.className+=" header-links-responsiv":e.className=""});
+"use strict";document.getElementById("header-button-menu").onclick=function(){var e=document.getElementById("header-links"),t=document.getElementById("header-button-menu-icon");"header-links"===e.className?(e.className+=" responsive",t.setAttribute("data-icon","angle-up")):(e.className="header-links",t.setAttribute("data-icon","angle-down"))};
