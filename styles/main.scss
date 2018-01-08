@@ -278,8 +278,51 @@ header {
   }
 } // SECTION FLIGHTS
 #flights {
-  .section-content {}
-} // SECTION HOTELS
+  .section-content {
+    margin: 0 15px;
+    position: relative;
+    overflow-x: auto;
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      font-size: 16px;
+      border-spacing: 15px;
+      min-width: 1110px;
+      tr {
+        border-bottom: 1px solid #e6e6e6;
+      }
+      th {
+        text-align: left;
+        font-weight: bolder;
+        color: #484848;
+        height: 90px;
+        &:nth-child(2), &:nth-child(10) {
+          width: 165px;
+        }
+        &:nth-child(4),  &:nth-child(6), &:nth-child(8) {
+          width:70px;
+        }
+      }
+      td {
+        height: 142px;
+        text-align: center;
+        img {
+          margin-right: 30px;
+        }
+        .table-cell-up {
+          color: #484848;
+          line-height: 30px;
+        }
+        .table-cell-down {
+          color: #9a9a9a;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+} 
+
+// SECTION HOTELS
 #hotels {
   .section-content {
     font-size: 0;

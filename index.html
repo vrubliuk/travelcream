@@ -7,6 +7,8 @@
   <title>TravelCream</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
+
+  <link rel="stylesheet" href="static/perfect-scrollbar.css">
   <script defer src="/static/fontawesome-all.min.js"></script>
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -46,26 +48,261 @@
 
   <section id="flights">
     <div class="container">
-        <div class="section-head">
-            <h4 class="section-name">Flights</h4>
-            <ul class="section-tabs">
-              <li class="tab-active">Not stop</li>
-              <li>Best price</li>
-              <li>Airline</li>
-              <li>Schedule</li>
-            </ul>
+      <div class="section-head">
+        <h4 class="section-name">Flights</h4>
+        <ul class="section-tabs">
+          <li class="tab-active">Not stop</li>
+          <li>Best price</li>
+          <li>Airline</li>
+          <li>Schedule</li>
+        </ul>
+      </div>
+      <div class="section-content" id="table-container">
+        <table>
+          <tr>
+            <th colspan="2">Airline</th>
+            <th></th>
+            <th>Date</th>
+            <th></th>
+            <th>Departure</th>
+            <th></th>
+            <th>Arrival</th>
+            <th></th>
+            <th>Time</th>
+            <th></th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/fly-1.png" alt="">
+            </td>
+            <td>
+              <span class="table-cell-up">Vueling</span>
+              <br>
+              <span class="table-cell-down">VO1367</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">03/11/2017</span>
+              <br>
+              <span class="table-cell-down">In 3 days</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Paris (CDG)</span>
+              <br>
+              <span class="table-cell-down">07:15</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Miami</span>
+              <br>
+              <span class="table-cell-down">05:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">08:45</span>
+              <br>
+              <span class="table-cell-down">CDG - MIA</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <button type="button" class="button-price">$ 870</button>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              <img src="images/fly-2.png" alt="">
+            </td>
+            <td>
+              <span class="table-cell-up">Air France</span>
+              <br>
+              <span class="table-cell-down">AF90</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">03/11/2017</span>
+              <br>
+              <span class="table-cell-down">In 3 days</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Paris (CDG)</span>
+              <br>
+              <span class="table-cell-down">03:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Miami</span>
+              <br>
+              <span class="table-cell-down">11:45</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">08:45</span>
+              <br>
+              <span class="table-cell-down">CDG - MIA</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <button type="button" class="button-price">$ 1023</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="images/fly-3.png" alt="">
+            </td>
+            <td>
+              <span class="table-cell-up">American</span>
+              <br>
+              <span class="table-cell-down">AA63</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">03/11/2017</span>
+              <br>
+              <span class="table-cell-down">In 3 days</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Paris (CDG)</span>
+              <br>
+              <span class="table-cell-down">01:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Miami</span>
+              <br>
+              <span class="table-cell-down">10:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">09:00</span>
+              <br>
+              <span class="table-cell-down">CDG - MIA</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <button type="button" class="button-price">$ 980</button>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              <img src="images/fly-4.png" alt="">
+            </td>
+            <td>
+              <span class="table-cell-up">Delta</span>
+              <br>
+              <span class="table-cell-down">DL405</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">03/11/2017</span>
+              <br>
+              <span class="table-cell-down">In 3 days</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Paris (CDG)</span>
+              <br>
+              <span class="table-cell-down">02:30</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Miami</span>
+              <br>
+              <span class="table-cell-down">11:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">08:30</span>
+              <br>
+              <span class="table-cell-down">CDG - MIA</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <button type="button" class="button-price">$ 1340</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/fly-5.png" alt="">
+            </td>
+            <td>
+              <span class="table-cell-up">Transavia</span>
+              <br>
+              <span class="table-cell-down">TO4330</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">03/11/2017</span>
+              <br>
+              <span class="table-cell-down">In 3 days</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Paris (CDG)</span>
+              <br>
+              <span class="table-cell-down">02:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">Miami</span>
+              <br>
+              <span class="table-cell-down">10:00</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table-cell-up">08:00</span>
+              <br>
+              <span class="table-cell-down">CDG - MIA</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <button type="button" class="button-price">$ 930</button>
+            </td>
+          </tr>
+
+        </table>
+
+
+
+      </div>
+      <footer class="section-footer">
+        <div>
+          <a href="#">See all flights</a>
         </div>
-        <div class="section-content">
-
-
-
-
-        </div>
-        <footer class="section-footer">
-            <div>
-              <a href="#">See all flights</a>
-            </div>
-          </footer>
+      </footer>
     </div>
   </section>
 
@@ -82,134 +319,134 @@
         <div class="tile">
           <img src="images/hotels-1.jpg" alt="">
           <div class="tile-text-container">
-              <h4>Hôtel Paris Ouest Achères</h4>
-              <div >
-                <div class="tile-distance">12,3 km</div>
-                <div class="tile-wifi">Free Wi-Fi</div>
-              </div>
-              <button type="button" class="button-price">$ 30</button>
+            <h4>Hôtel Paris Ouest Achères</h4>
+            <div>
+              <div class="tile-distance">12,3 km</div>
+              <div class="tile-wifi">Free Wi-Fi</div>
+            </div>
+            <button type="button" class="button-price">$ 30</button>
           </div>
         </div>
         <div class="tile">
-            <img src="images/hotels-2.jpg" alt="">
-            <div class="tile-text-container">
-                <h4>L'Hôtel du Collectionneur</h4>
-                <div >
-                  <div class="tile-distance">9,8 km</div>
-                  <div class="tile-wifi">Free Wi-Fi</div>
-                </div>
-                <button type="button" class="button-price">$ 38</button>
+          <img src="images/hotels-2.jpg" alt="">
+          <div class="tile-text-container">
+            <h4>L'Hôtel du Collectionneur</h4>
+            <div>
+              <div class="tile-distance">9,8 km</div>
+              <div class="tile-wifi">Free Wi-Fi</div>
             </div>
+            <button type="button" class="button-price">$ 38</button>
           </div>
-          <div class="tile">
-              <img src="images/hotels-3.jpg" alt="">
-              <div class="tile-text-container">
-                  <h4>Hôtel Eiffel Seine</h4>
-                  <div >
-                    <div class="tile-distance">17,6 km</div>
-                    <div class="tile-wifi">Free Wi-Fi</div>
-                  </div>
-                  <button type="button" class="button-price">$ 42</button>
-              </div>
+        </div>
+        <div class="tile">
+          <img src="images/hotels-3.jpg" alt="">
+          <div class="tile-text-container">
+            <h4>Hôtel Eiffel Seine</h4>
+            <div>
+              <div class="tile-distance">17,6 km</div>
+              <div class="tile-wifi">Free Wi-Fi</div>
             </div>
-            <div class="tile">
-                <img src="images/hotels-4.jpg" alt="">
-                <div class="tile-text-container">
-                    <h4>Hôtel Mademoiselle</h4>
-                    <div >
-                      <div class="tile-distance">23,2 km</div>
-                      <div class="tile-wifi">Free Wi-Fi</div>
-                    </div>
-                    <button type="button" class="button-price">$ 46</button>
-                </div>
-              </div>
-              <div class="tile">
-                  <img src="images/hotels-5.jpg" alt="">
-                  <div class="tile-text-container">
-                      <h4>Hôtel Novotel Paris-Les-Halles</h4>
-                      <div >
-                        <div class="tile-distance">10,7 km</div>
-                        <div class="tile-wifi">Free Wi-Fi</div>
-                      </div>
-                      <button type="button" class="button-price">$ 52</button>
-                  </div>
-                </div>
-                <div class="tile">
-                    <img src="images/hotels-6.jpg" alt="">
-                    <div class="tile-text-container">
-                        <h4>Villa Royale Montsouris</h4>
-                        <div >
-                          <div class="tile-distance">14,8 km</div>
-                          <div class="tile-wifi">Free Wi-Fi</div>
-                        </div>
-                        <button type="button" class="button-price">$ 56</button>
-                    </div>
-                  </div>
+            <button type="button" class="button-price">$ 42</button>
+          </div>
+        </div>
+        <div class="tile">
+          <img src="images/hotels-4.jpg" alt="">
+          <div class="tile-text-container">
+            <h4>Hôtel Mademoiselle</h4>
+            <div>
+              <div class="tile-distance">23,2 km</div>
+              <div class="tile-wifi">Free Wi-Fi</div>
+            </div>
+            <button type="button" class="button-price">$ 46</button>
+          </div>
+        </div>
+        <div class="tile">
+          <img src="images/hotels-5.jpg" alt="">
+          <div class="tile-text-container">
+            <h4>Hôtel Novotel Paris-Les-Halles</h4>
+            <div>
+              <div class="tile-distance">10,7 km</div>
+              <div class="tile-wifi">Free Wi-Fi</div>
+            </div>
+            <button type="button" class="button-price">$ 52</button>
+          </div>
+        </div>
+        <div class="tile">
+          <img src="images/hotels-6.jpg" alt="">
+          <div class="tile-text-container">
+            <h4>Villa Royale Montsouris</h4>
+            <div>
+              <div class="tile-distance">14,8 km</div>
+              <div class="tile-wifi">Free Wi-Fi</div>
+            </div>
+            <button type="button" class="button-price">$ 56</button>
+          </div>
+        </div>
 
 
 
       </div>
       <footer class="section-footer">
-          <div>
-            <a href="#">See all hotels</a>
-          </div>
-        </footer>
+        <div>
+          <a href="#">See all hotels</a>
+        </div>
+      </footer>
     </div>
   </section>
 
   <section id="attractions">
     <div class="container">
-        <div class="section-head">
-            <h4 class="section-name">Attractions</h4>
-            <ul class="section-tabs">
-              <li class="tab-active">All</li>
-              <li>Shoppings</li>
-              <li>Shows</li>
-              <li>Parks</li>
-              <li>Circuits</li>
-              <li>Museums</li>
-              <li>Monuments</li>
-            </ul>
+      <div class="section-head">
+        <h4 class="section-name">Attractions</h4>
+        <ul class="section-tabs">
+          <li class="tab-active">All</li>
+          <li>Shoppings</li>
+          <li>Shows</li>
+          <li>Parks</li>
+          <li>Circuits</li>
+          <li>Museums</li>
+          <li>Monuments</li>
+        </ul>
+      </div>
+      <div class="section-content">
+        <div class="tile">
+          <div class="tile-flex-container">
+            <div class="tile-text">Eiffel Tower</div>
+          </div>
         </div>
-        <div class="section-content">
-          <div class="tile">
-            <div class="tile-flex-container">
-              <div class="tile-text">Eiffel Tower</div>
-            </div>
+        <div class="tile">
+          <div class="tile-flex-container">
+            <div class="tile-text">Louvres</div>
           </div>
-          <div class="tile">
-            <div class="tile-flex-container">
-              <div class="tile-text">Louvres</div>
-            </div>
+        </div>
+        <div class="tile">
+          <div class="tile-flex-container">
+            <div class="tile-text">Notre Dame de Paris</div>
           </div>
-          <div class="tile">
-            <div class="tile-flex-container">
-              <div class="tile-text">Notre Dame de Paris</div>
-            </div>
+        </div>
+        <div class="tile">
+          <div class="tile-flex-container">
+            <div class="tile-text">Forum des Halles</div>
           </div>
-          <div class="tile">
-            <div class="tile-flex-container">
-              <div class="tile-text">Forum des Halles</div>
-            </div>
+        </div>
+        <div class="tile">
+          <div class="tile-flex-container">
+            <div class="tile-text">Arc de Triomphe</div>
           </div>
-          <div class="tile">
-            <div class="tile-flex-container">
-              <div class="tile-text">Arc de Triomphe</div>
-            </div>
+        </div>
+        <div class="tile">
+          <div class="tile-flex-container">
+            <div class="tile-text">Sacré Coeur</div>
           </div>
-          <div class="tile">
-            <div class="tile-flex-container">
-              <div class="tile-text">Sacré Coeur</div>
-            </div>
-          </div>
+        </div>
 
 
+      </div>
+      <footer class="section-footer">
+        <div>
+          <a href="#">See all attractions</a>
         </div>
-        <footer class="section-footer">
-            <div>
-              <a href="#">See all attractions</a>
-            </div>
-          </footer>
+      </footer>
     </div>
   </section>
 
@@ -306,6 +543,7 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="static/perfect-scrollbar.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
