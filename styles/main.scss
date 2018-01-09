@@ -100,6 +100,10 @@ header {
   height: 40px;
   line-height: 40px;
   cursor: pointer;
+  i {
+    font-size: 40px;
+  }
+
   &:hover {
     color: $pink;
   }
@@ -583,6 +587,10 @@ header {
       justify-content: center;
       .footer-column {
         width: 350px;
+        margin-bottom: 30px;
+        h3 {
+          margin: 0 0 20px 0;
+        }
       }
     }
   }

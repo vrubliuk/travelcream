@@ -19,10 +19,10 @@ $(document).ready(function () {
         let buttonMenuIcon = document.getElementById("header-button-menu-icon");
         if (navigationLinks.className === "header-links") {
             navigationLinks.className += " responsive";
-            buttonMenuIcon.setAttribute("data-icon", "angle-up");
+            buttonMenuIcon.innerHTML = "expand_less";
         } else {
             navigationLinks.className = "header-links";
-            buttonMenuIcon.setAttribute("data-icon", "angle-down");
+            buttonMenuIcon.innerHTML = "expand_more";
         }
     }
 
