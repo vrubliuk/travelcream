@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
-            var hash = this.hash;
+            let hash = this.hash;
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 800, function () {
@@ -12,12 +12,11 @@ $(document).ready(function () {
             });
         }
     });
+
     // HEADER
     document.getElementById("header-button-menu").onclick = () => {
         let navigationLinks = document.getElementById("header-links");
         let buttonMenuIcon = document.getElementById("header-button-menu-icon");
-
-
         if (navigationLinks.className === "header-links") {
             navigationLinks.className += " responsive";
             buttonMenuIcon.setAttribute("data-icon", "angle-up");
@@ -31,18 +30,19 @@ $(document).ready(function () {
         let header = document.getElementsByTagName("header")[0];
         let logo = document.getElementById('website-logo');
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            header.style.backgroundColor = "rgba(0, 0,0, 0.75)";
+            header.style.backgroundColor = "rgba(0, 0,0, 0.8)";
+            header.style.padding = "10px 0";
         } else {
             header.style.backgroundColor = "";
+            header.style.padding = "";
         }
     }
 
-    // CUSTOM SCROLLBAR
-    // let ps = new PerfectScrollbar('#table-container');
-
-
-
-
-
-
+    // Change color for active tab
+    $(".section-tabs > li").click(function() {
+        if (!$(this).hasClass("tab-active")) {
+            $(this).addClass("tab-active");
+        }
+        $(this).siblings().removeClass("tab-active");
+    });
 });
